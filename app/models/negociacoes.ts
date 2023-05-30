@@ -6,4 +6,8 @@ export class Negociacoes{
     add(n : Negociacao) : void{
         this._negociacoes.push(n);
     }
+
+    list(): ReadonlyArray<Negociacao>{
+        return [...this._negociacoes];
+    } 
 }
