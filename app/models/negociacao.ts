@@ -2,8 +2,8 @@ export class Negociacao {
 
     constructor(
         private _data: Date,
-        public readonly valor: number,
-        public readonly quantidade: number
+        public readonly quantidade: number,
+        public readonly valor: number
     ) { }
 
 
