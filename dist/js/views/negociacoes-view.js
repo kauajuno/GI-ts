@@ -15,7 +15,7 @@ export class NegociacoesView extends View {
             console.log(element);
             return `
                         <tr>
-                            <td>${new Intl.DateTimeFormat().format(element.data)}</td>
+                            <td>${this.formatData(element.data)}</td>
                             <td>${element.quantidade}</td>
                             <td>${element.valor}</td>
                         </tr>
@@ -24,6 +24,9 @@ export class NegociacoesView extends View {
             </tbody>
         </table>
         `;
+    }
+    formatData(data) {
+        return new Intl.DateTimeFormat().format(data);
     }
     update(model) {
         this._div.innerHTML = this.template(model);
