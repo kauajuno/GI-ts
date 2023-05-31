@@ -6,8 +6,6 @@ export class Negociacao {
         public readonly valor: number
     ) { }
 
-
-
     get volume() {
         return this.quantidade * this.valor;
     }
